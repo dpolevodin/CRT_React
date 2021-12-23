@@ -1,7 +1,11 @@
+# CRT_React
+
+Educational project at CRT.school
+
 # ФИО
 
 Полеводин Дмитрий Игоревич
 
-# CRT_React
+# Working docker screenshot
 
-Educational project at CRT.school
+![Screenshot](docker-homework.png)
