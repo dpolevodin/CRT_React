@@ -6,7 +6,7 @@ export const UserFormViaFunction = () => {
   const [name, setName] = useState(null);
 
   const displayEnteredName = (name) => {
-    return <h2>Your name: {name}</h2>;
+    return <h2 className={style.userNameTitle}>Your name: {name}</h2>;
   };
 
   const handleOnChangeInput = (event) => {

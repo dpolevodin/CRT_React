@@ -7,6 +7,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 40rem;
+  padding: 1rem;
   margin-bottom: 2rem;
   color: var(--form-font-color);
+}
+
+.userNameTitle {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
