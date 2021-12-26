@@ -8,4 +8,4 @@ Educational project at CRT.school
 
 # Working docker screenshot
 
-![Screenshot](docker-homework.png)
+![Screenshot](image/docker-homework.png)
