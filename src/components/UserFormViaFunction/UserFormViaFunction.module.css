@@ -1,5 +1,6 @@
 :root {
   --form-font-color: #fff;
+  --attention-color: rgb(238, 255, 0);
 }
 
 ._ {
@@ -8,6 +9,7 @@
   flex-wrap: wrap;
   width: 16rem;
   max-width: 16rem;
+  min-height: 12rem;
   padding: 1rem;
   margin-bottom: 2rem;
   color: var(--form-font-color);
@@ -15,4 +17,20 @@
 
 .userNameTitle {
   display: flex;
+  font-weight: normal;
+}
+
+.userNameTitle::before {
+  content: "🎅";
+  margin-right: 0.5rem;
+}
+
+.emptyUserName {
+  color: var(--attention-color);
+  font-weight: normal;
+}
+
+.emptyUserName::before {
+  content: "⚠️";
+  margin-right: 0.5rem;
 }

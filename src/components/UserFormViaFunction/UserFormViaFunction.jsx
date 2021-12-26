@@ -5,19 +5,24 @@ import style from "./UserFormViaFunction.module.css";
 export const UserFormViaFunction = () => {
   const [name, setName] = useState(null);
 
-  const displayEnteredName = (name) => {
-    return <h2 className={style.userNameTitle}>Your name: {name}</h2>;
-  };
-
-  const handleOnChangeInput = (event) => {
+  const handleOnChange = (event) => {
     const { value } = event.target;
     setName(value);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
-    <form className={style._}>
-      <Input value={name || ""} onChange={handleOnChangeInput} />
-      {name && displayEnteredName(name)}
+    <form className={style._} onSubmit={handleSubmit}>
+      <h2>Functional component</h2>
+      <Input value={name || ""} onChange={handleOnChange} />
+      {name ? (
+        <h3 className={style.userNameTitle}>Happy new year, {name}!</h3>
+      ) : (
+        <h3 className={style.emptyUserName}>Name is not filled</h3>
+      )}
     </form>
   );
 };
