@@ -1,0 +1,19 @@
+:root {
+  --input-background-color: #fff;
+  --placeholder-color: rgb(80, 80, 80);
+}
+
+._ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--input-background-color);
+  width: 100%;
+  height: 2rem;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+::placeholder {
+  color: var(--placeholder-color);
+}

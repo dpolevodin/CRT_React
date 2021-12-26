@@ -1,0 +1,12 @@
+:root {
+  --form-font-color: #fff;
+}
+
+._ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  color: var(--form-font-color);
+}
