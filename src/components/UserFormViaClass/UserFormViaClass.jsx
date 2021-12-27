@@ -8,16 +8,18 @@ export class UserFormViaClass extends React.Component {
     this.state = {
       name: null,
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleOnChange = this.handleOnChange.bind(this);
   }
 
-  handleSubmit = (event) => {
+  handleSubmit(event) {
     event.preventDefault();
-  };
+  }
 
-  handleOnChange = (event) => {
+  handleOnChange(event) {
     const { value } = event.target;
     this.setState({ name: value });
-  };
+  }
 
   render() {
     return (
