@@ -24,6 +24,8 @@ export class Timer extends React.Component {
   timer() {
     if (this.state.timer) {
       this.setState({ timer: this.state.timer - 1 });
+    } else {
+      clearInterval(this.state.intervalId);
     }
   }
 
