@@ -1,0 +1,39 @@
+:root {
+  --button-color: #fff;
+  --shadow: rgba(238, 255, 0, 0.75);
+  --round-color: rgb(228, 109, 30);
+  --danger-color: red;
+  --disabled: grey;
+}
+
+._ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.125rem;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: var(--button-color);
+  cursor: pointer;
+}
+
+._:active {
+  box-shadow: 0 0 0.75rem var(--shadow);
+}
+
+.round {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: var(--disabled);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--button-color);
+}
+
+.round:active,
+:focus {
+  background-color: var(--round-color);
+}

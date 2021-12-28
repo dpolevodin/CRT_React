@@ -24,3 +24,7 @@
 ::placeholder {
   color: var(--placeholder-color);
 }
+
+.short {
+  width: 12rem;
+}

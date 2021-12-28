@@ -25,7 +25,11 @@ export class UserFormViaClass extends React.Component {
     return (
       <form className={style._} onSubmit={this.handleSubmit}>
         <h2>Class component</h2>
-        <Input value={this.state.name || ""} onChange={this.handleOnChange} />
+        <Input
+          value={this.state.name || ""}
+          onChange={this.handleOnChange}
+          placeholder="Enter your name"
+        />
         {this.state.name ? (
           <h3 className={style.userNameTitle}>
             Happy new year, {this.state.name}!

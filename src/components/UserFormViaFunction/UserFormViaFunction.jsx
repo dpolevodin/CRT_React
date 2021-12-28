@@ -17,7 +17,11 @@ export const UserFormViaFunction = () => {
   return (
     <form className={style._} onSubmit={handleSubmit}>
       <h2>Functional component</h2>
-      <Input value={name || ""} onChange={handleOnChange} />
+      <Input
+        value={name || ""}
+        onChange={handleOnChange}
+        placeholder="Enter your name"
+      />
       {name ? (
         <h3 className={style.userNameTitle}>Happy new year, {name}!</h3>
       ) : (

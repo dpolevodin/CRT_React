@@ -1,0 +1,12 @@
+.display {
+  color: var(--timer-color);
+  padding: 2rem;
+  font-family: "Press Start 2P", cursive;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.test {
+  color: var(--timer-color);
+  font-size: 3rem;
+}

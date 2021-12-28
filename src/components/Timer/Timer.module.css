@@ -1,0 +1,13 @@
+:root {
+  --timer-color: #fff;
+}
+
+.inputWrapper {
+  margin-bottom: 2rem;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 18rem;
+}
