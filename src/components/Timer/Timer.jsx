@@ -12,8 +12,9 @@ export class Timer extends React.Component {
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.timer = this.timer.bind(this);
+    this.handleClear = this.handleClear.bind(this);
     this.handleClickStop = this.handleClickStop.bind(this);
+    this.timer = this.timer.bind(this);
   }
 
   handleChange(event) {
@@ -34,13 +35,25 @@ export class Timer extends React.Component {
     }
   }
 
-  handleClick() {
+  handleClick(event) {
+    event.preventDefault();
     const intervalId = setInterval(this.timer, 1000);
     this.setState({ intervalId: intervalId });
   }
 
-  handleClickStop() {
+  handleClickStop(event) {
+    event.preventDefault();
     clearInterval(this.state.intervalId);
+  }
+
+  handleClear(event) {
+    event.preventDefault();
+    this.setState({ timer: null });
+    clearInterval(this.state.intervalId);
+  }
+
+  handleStopTimer() {
+    alert("BOOM!");
   }
 
   componentWillUnmount() {
@@ -57,6 +70,7 @@ export class Timer extends React.Component {
             onChange={this.handleChange}
             value={this.state.timer || ""}
           />
+          <Button OnClick={this.handleClear}>x</Button>
         </div>
 
         <div className={style.buttonWrapper}>
@@ -68,7 +82,12 @@ export class Timer extends React.Component {
           </Button>
         </div>
 
-        {this.state.timer > 0 && <TimerDisplay timer={this.state.timer} />}
+        {this.state.timer > 0 && (
+          <TimerDisplay
+            timer={this.state.timer}
+            callBack={this.handleStopTimer}
+          />
+        )}
       </>
     );
   }

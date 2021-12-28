@@ -1,9 +1,26 @@
 :root {
   --timer-color: #fff;
+  --clearbutton-hover: rgb(228, 109, 30);
 }
 
 .inputWrapper {
+  display: flex;
   margin-bottom: 2rem;
+  background-color: var(--timer-color);
+}
+
+.inputWrapper button:hover {
+  box-shadow: none;
+  color: var(--clearbutton-hover);
+}
+
+.inputWrapper button:focus {
+  background-color: var(--timer-color);
+  box-shadow: none;
+}
+
+.inputWrapper button:active {
+  box-shadow: 0 0 0.75rem var(--shadow);
 }
 
 .buttonWrapper {

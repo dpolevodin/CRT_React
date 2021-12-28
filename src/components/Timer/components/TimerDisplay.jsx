@@ -3,7 +3,7 @@ import style from "./TimerDisplay.module.css";
 
 export class TimerDisplay extends React.Component {
   componentWillUnmount() {
-    alert("Boom!");
+    return this.props.callBack();
   }
 
   render() {
