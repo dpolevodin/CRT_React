@@ -18,7 +18,12 @@ export class Timer extends React.Component {
 
   handleChange(event) {
     const { value } = event.target;
-    this.setState({ timer: value });
+    if (isFinite(value)) {
+      this.setState({ timer: value });
+    } else {
+      alert("Введите числовое значение!");
+      this.setState({ timer: null });
+    }
   }
 
   timer() {
