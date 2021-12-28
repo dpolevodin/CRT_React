@@ -3,7 +3,8 @@
   --shadow: rgba(238, 255, 0, 0.75);
   --round-color: rgb(228, 109, 30);
   --danger-color: red;
-  --disabled: grey;
+  --disabled: rgba(128, 128, 128, 0.5);
+  --glow-color: #fff;
 }
 
 ._ {
@@ -17,6 +18,10 @@
   font-family: "Ubuntu", sans-serif;
   background-color: var(--button-color);
   cursor: pointer;
+}
+
+._:hover {
+  box-shadow: 0 0 1rem var(--glow-color);
 }
 
 ._:active {
